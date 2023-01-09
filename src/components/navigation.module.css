@@ -1,0 +1,17 @@
+.nav {
+  display: flex;
+  padding: 16px;
+  justify-content: space-between;
+  gap: 8px;
+  
+}
+.navRight {
+  display: flex;
+  gap:16px;
+}
+
+.navItem, .logo {
+    padding: 8px;
+    font-size: 24px;
+    /* font-family: ; */
+}
