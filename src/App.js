@@ -1,14 +1,23 @@
-import { Outlet } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
-import Navigation from "./components/navigation";
+import RootLayout from "./pages/RootLayout";
+import ErrorPage from "./pages/error-page";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />,
+    errorElement: <ErrorPage />,
+    children:[
+      // {
+      //   path:"/"
+      // }
+    ]
+  },
+]);
 
 function App() {
-  return (
-    <div className="App">
-      <Navigation />
-      <Outlet />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
